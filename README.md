@@ -1,5 +1,5 @@
 # advanced_data_storage_and_retrieval
-use sqlalchemy, pandas and matplotlib to deal with daily climate data (precipitation and temperature) in Hawaii from 01/01/2010 to 08/23/2017, recorded in 9 different stations.
+use sqlalchemy, pandas and matplotlib to deal with daily climate data (precipitation and temperature) in Hawaii from 01/01/2010 to 08/23/2017, recorded at 9 different stations.
 
 * Analysis
 
