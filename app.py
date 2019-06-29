@@ -57,14 +57,11 @@ def home():
 # Return a JSON list of date and precipitation from station USC00519281
 app.route("/api/v1.0/precipitation")   
 def precipitation():
-    results = session.query(Measurement.date, Measurement.prcp).\
-              filter_by(station = 'USC00519281').\
-              order_by(Measurement.date)
+    results = session.query(Measurement.date, Measurement.prcp).all()
+              
     all_prcps = []
     for date, prcp in results:
-        prcp_date = {}
-        prcp_date[date]= prcp
-        all_prcps.append(prcp_date)
+        app_prcps.append({data: prcp})
     
     return jsonify(all_prcps)
 
